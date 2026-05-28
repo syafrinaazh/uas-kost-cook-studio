@@ -1,0 +1,42 @@
+/* Reset CSS dasar agar tampilan konsisten di semua browser */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #FFF9F0; /* Sesuai dengan COLORS.cream */
+  color: #264653;            /* Sesuai dengan COLORS.textDark */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Memastikan aplikasi tampil maksimal di lebar layar HP (mobile-first) */
+#root {
+  max-width: 480px;
+  margin: 0 auto;
+  min-height: 100vh;
+  position: relative;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+}
+
+/* Scrollbar yang lebih cantik (opsional) */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #588157; /* Sesuai dengan COLORS.green */
+  border-radius: 10px;
+}
+
+/* Global Button Hover Effect */
+button {
+  transition: all 0.2s ease-in-out;
+}
+button:active {
+  transform: scale(0.96);
+}
