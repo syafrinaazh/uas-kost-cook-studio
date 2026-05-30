@@ -1,13 +1,146 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>uas-kost-cook-studiofrontend</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kost Cook Studio</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
+        body {
+            font-family: 'Fredoka', sans-serif;
+        }
+        .bg-gradient-custom {
+            background: linear-gradient(180deg, #F99192 0%, #FFE099 100%);
+        }
+    </style>
+</head>
+<body class="bg-gradient-custom min-h-screen flex items-center justify-center p-4">
+
+    <div class="w-full max-w-4xl bg-[#FFFDF9] rounded-3xl shadow-2xl overflow-hidden border-8 border-gray-800 relative">
+        
+        <div id="page-beranda" class="block">
+            <div class="bg-[#B4603B] text-white text-xs md:text-sm py-3 px-6 flex justify-center gap-6 md:gap-10 font-medium tracking-wide">
+                <a href="#" class="hover:underline">beranda</a>
+                <a href="#" class="hover:underline">kategori</a>
+                <a href="#" class="hover:underline">resep populer</a>
+                <a href="#" class="hover:underline">mulai memasak</a>
+            </div>
+
+            <div class="p-6 md:p-10 text-center max-h-[80vh] overflow-y-auto">
+                <div class="flex justify-center mb-4">
+                    <div class="bg-white px-10 py-6 rounded-2xl shadow-sm flex flex-col items-center">
+                        <span class="text-5xl font-black tracking-wider flex items-center gap-1">
+                            <span class="text-[#3A9AD4]">K</span>
+                            <span class="text-[#F1BA2E] text-4xl">🍳</span>
+                            <span class="text-[#E9526F]">S</span>
+                            <span class="text-[#7CB743]">T</span>
+                        </span>
+                        <span class="text-xs text-gray-500 font-bold tracking-widest mt-1">Cook studio</span>
+                    </div>
+                </div>
+
+                <h1 class="text-2xl md:text-3xl font-bold text-[#B4603B] mb-2">Masak simpel hidup lebih hemat</h1>
+                <p class="text-sm md:text-base text-[#B4603B]/80 max-w-xl mx-auto mb-8 leading-relaxed">
+                    Temukan resep praktis, murah dan cepat khusus anak kost!<br>
+                    <span class="font-semibold">Kost Cook Studio</span> adalah solusi buat kamu yang ingin tetap makan enak tanpa ribet.
+                </p>
+
+                <div class="mb-6">
+                    <p class="text-left text-xs font-bold text-[#B4603B] mb-2 tracking-wide">Fitur Utama</p>
+                    <div class="grid grid-cols-3 gap-3">
+                        <button class="bg-[#6B3B24] text-white text-xs py-3 rounded-lg font-bold shadow-sm">Praktis</button>
+                        <button class="bg-[#FFF066] text-[#6B3B24] text-xs py-3 rounded-lg font-bold shadow-sm">Hemat</button>
+                        <button class="bg-[#C7E576] text-[#6B3B24] text-xs py-3 rounded-lg font-bold shadow-sm">Cepat</button>
+                    </div>
+                </div>
+
+                <div class="mb-6">
+                    <p class="text-left text-xs font-bold text-[#B4603B] mb-2 tracking-wide">Kategori Resep</p>
+                    <div class="grid grid-cols-4 gap-3">
+                        <button class="bg-[#CCA494] text-[#6B3B24] text-xs py-4 rounded-lg font-bold shadow-sm">Sarapan</button>
+                        <button class="bg-[#3B4D6B] text-white text-xs py-4 rounded-lg font-bold shadow-sm">Makan Siang</button>
+                        <button class="bg-[#C2A649] text-white text-xs py-4 rounded-lg font-bold shadow-sm">Makan Malam</button>
+                        <button class="bg-[#E77943] text-white text-xs py-4 rounded-lg font-bold shadow-sm">Minuman</button>
+                    </div>
+                </div>
+
+                <div class="mb-8">
+                    <p class="text-left text-xs font-bold text-[#B4603B] mb-2 tracking-wide">Resep Populer</p>
+                    <div class="grid grid-cols-4 gap-3">
+                        <div class="bg-[#F5C2C4] text-[#6B3B24] text-xs py-4 rounded-lg font-bold shadow-sm flex items-center justify-center">Mie</div>
+                        <div class="bg-[#FCE2DB] text-[#6B3B24] text-xs py-4 rounded-lg font-bold shadow-sm flex items-center justify-center">Nasgor</div>
+                        <div class="bg-[#FAF2CD] text-[#6B3B24] text-xs py-4 rounded-lg font-bold shadow-sm flex items-center justify-center">Ayam kecap</div>
+                        <div class="bg-[#C4DF82] text-[#6B3B24] text-xs py-4 rounded-lg font-bold shadow-sm flex items-center justify-center">Telur dadar</div>
+                    </div>
+                </div>
+
+                <button onclick="pindahKeLogin()" class="bg-[#7CD555] hover:bg-[#6bc244] text-white text-xs font-bold py-3 px-6 rounded-full shadow-md transition transform hover:scale-105 inline-flex items-center gap-1 cursor-pointer">
+                    Jelajahi Resep ✨
+                </button>
+                <p class="text-white text-sm font-bold tracking-wide mt-4 drop-shadow-sm">Mulai masak sekarang dan hemat pengeluaran mu!</p>
+            </div>
+        </div>
+
+        <div id="page-login" class="hidden min-h-[70vh] flex items-center justify-center p-6 md:p-12">
+            <div class="w-full bg-white rounded-2xl shadow-sm p-8 flex flex-col md:flex-row items-center justify-around gap-8">
+                
+                <div class="flex flex-col items-center">
+                    <span class="text-7xl font-black tracking-wider flex items-center gap-1">
+                        <span class="text-[#3A9AD4]">K</span>
+                        <span class="text-[#F1BA2E] text-6xl">🍳</span>
+                        <span class="text-[#E9526F]">S</span>
+                        <span class="text-[#7CB743]">T</span>
+                    </span>
+                    <span class="text-sm text-gray-500 font-bold tracking-widest mt-1">Cook studio</span>
+                </div>
+
+                <div class="w-full max-w-xs text-center">
+                    <h2 class="text-[#B4603B] text-lg font-bold mb-1">selamat datang kembali</h2>
+                    <p class="text-[#B4603B]/70 text-xs font-semibold mb-6">silahkan login untuk memulai</p>
+                    
+                    <form id="form-login-admin" onsubmit="handleLogin(event)" class="space-y-3">
+                        <input type="text" id="username" placeholder="email / username" required
+                            class="w-full px-4 py-2.5 bg-[#FCFBE3] border border-[#E77943]/30 rounded-xl text-sm placeholder-[#B4603B]/40 text-[#6B3B24] focus:outline-none focus:border-[#E77943]">
+                        
+                        <input type="password" id="password" placeholder="password" required
+                            class="w-full px-4 py-2.5 bg-[#FCFBE3] border border-[#E77943]/30 rounded-xl text-sm placeholder-[#B4603B]/40 text-[#6B3B24] focus:outline-none focus:border-[#E77943]">
+                        
+                        <div class="flex justify-center gap-4 text-[10px] text-blue-600 font-medium">
+                            <a href="#" class="hover:underline">forgot password</a>
+                            <span>/</span>
+                            <a href="#" class="hover:underline">create new account</a>
+                        </div>
+
+                        <button type="submit" class="w-32 bg-[#B4603B] hover:bg-[#964f2f] text-white text-sm font-bold py-2.5 rounded-xl shadow-md mt-4 transition cursor-pointer mx-auto block">
+                            masuk
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        // Fungsi pindah halaman dari Beranda ke Login sesuai video demo
+        function pindahKeLogin() {
+            document.getElementById('page-beranda').classList.add('hidden');
+            document.getElementById('page-login').classList.remove('hidden');
+        }
+
+        // Fungsi interaksi Login yang terhubung langsung ke backend port 8080 kamu
+        async function handleLogin(event) {
+            event.preventDefault(); // Biar halaman nggak reload otomatis
+            
+            const userField = document.getElementById('username').value;
+            const passwordField = document.getElementById('password').value;
+
+            // Di bawah ini adalah logika fetch untuk menembak API backend kamu nanti
+            console.log("Mencoba login dengan:", { userField, passwordField });
+            alert("Login Berhasil! Hubungkan kodingan fetch() kamu ke API 'server.js' port 8080 untuk validasi data riil.");
+        }
+    </script>
+</body>
 </html>
